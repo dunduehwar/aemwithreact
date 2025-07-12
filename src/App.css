@@ -1,10 +1,25 @@
+/* Import AEM-specific styles */
+@import './aem-styles.css';
+
+/**
+ * App.css - Main application styles with AEM integration
+ * 
+ * This file combines standard React app styles with AEM-specific
+ * frontend annotations and component styling.
+ */
+
 .App {
   text-align: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
+/* AEM-enhanced logo styling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  max-width: 200px;
+  margin-bottom: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +28,131 @@
   }
 }
 
+/* AEM header with enhanced styling */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding: 40px 20px;
+  color: white;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
+/* AEM link styling */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: rgba(97, 218, 251, 0.1);
+  border: 2px solid #61dafb;
 }
 
+.App-link:hover {
+  background-color: #61dafb;
+  color: #282c34;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(97, 218, 251, 0.3);
+}
+
+/* AEM text content styling */
+.aem-text {
+  line-height: 1.6;
+  margin: 16px 0;
+}
+
+.aem-text code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+/* AEM button base styling */
+.aem-button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.aem-button:focus {
+  outline: 3px solid #ff6b35;
+  outline-offset: 2px;
+}
+
+/* AEM image container styling */
+.aem-image-container {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.aem-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* AEM responsive utilities */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 30px 15px;
+    min-height: 250px;
+  }
+  
+  .App-logo {
+    height: 30vmin;
+    max-width: 150px;
+  }
+  
+  .App-link {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 20px 10px;
+    min-height: 200px;
+  }
+  
+  .aem-text {
+    font-size: 14px;
+  }
+}
+
+/* Logo spin animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* AEM component demonstration grid */
+.aem-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .aem-demo-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px 15px;
   }
 }
