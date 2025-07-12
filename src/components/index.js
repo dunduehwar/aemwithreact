@@ -11,17 +11,20 @@
 // Import all AEM components
 import Hero from './Hero';
 import Card from './Card';
+import AEMTitle from './AEMTitle';
 
 // Export components for use in other parts of the application
 export {
   Hero,
-  Card
+  Card,
+  AEMTitle
 };
 
 // Export default object containing all components
 const ComponentsObject = {
   Hero,
-  Card
+  Card,
+  AEMTitle
 };
 
 export default ComponentsObject;
@@ -57,5 +60,13 @@ export const COMPONENT_METADATA = {
     icon: 'card',
     editable: true,
     properties: ['title', 'description', 'image', 'imageAlt', 'linkUrl', 'linkText', 'variant']
+  },
+  title: {
+    name: 'Title',
+    group: 'AEM with React - Content',
+    description: 'Title component for AEM pages',
+    icon: 'title',
+    editable: true,
+    properties: ['title', 'type', 'linkURL', 'linkText']
   }
 };

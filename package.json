@@ -1,6 +1,7 @@
 {
   "name": "aemwithreact",
   "version": "0.1.0",
+  "proxy": "http://localhost:4502",
   "private": true,
   "dependencies": {
     "@adobe/aem-react-editable-components": "^2.0.0",
